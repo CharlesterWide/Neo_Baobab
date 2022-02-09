@@ -1,0 +1,31 @@
+{
+  "name": "neo_baobab",
+  "version": "1.0.0",
+  "description": "Nueva version del bot baobab",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "start": "npx tsc && node dist/src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlesterWide/Neo_Baobab.git"
+  },
+  "keywords": [
+    "Telegram",
+    "Pokemon",
+    "Profesor"
+  ],
+  "author": "CharlesterWide",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlesterWide/Neo_Baobab/issues"
+  },
+  "homepage": "https://github.com/CharlesterWide/Neo_Baobab#readme",
+  "dependencies": {
+    "@types/node": "^17.0.16",
+    "node-telegram-bot-api": "^0.56.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.5.5"
+  }
+}

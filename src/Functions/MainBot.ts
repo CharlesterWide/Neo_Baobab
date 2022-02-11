@@ -1,18 +1,21 @@
+import { message } from "../DataStructures/message";
+
 export class Baobab {
 
     constructor() { }
 
     readMessage(msg: any) {
         var promise = new Promise(function (resolve, reject) {
-            var chatId = msg.chat.id;
-            console.log("Chat:" + msg.chat.id);
-            console.log("Usuario: " + msg.from.username);
-            console.log("Texto: " + msg.text.toString());
-            console.log(Date());
+            var MSG = new message(msg);
+            console.log(`Username      :   ${MSG.username}`);
+            console.log(`Time          :   ${MSG.date}`);
+            console.log(`Has files     :   ${(MSG.hasDocument || MSG.hasPhoto || MSG.hasSticker)}`);
+            console.log(`Message       :   ${MSG.text}`);
+            console.log(`Is command    :   ${MSG.isCommand}`)
 
             resolve("Hola " + msg.from.username + "!\n"
-            + "Aun no estoy listo en esta nueva versión!\n"
-            + "Hay que esperar un poco más!" )
+                + "Aun no estoy listo en esta nueva versión!\n"
+                + "Hay que esperar un poco más!")
         })
         return promise;
     }

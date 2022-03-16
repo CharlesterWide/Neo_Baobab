@@ -1,4 +1,4 @@
-export class ability {
+export class Ability {
     effect: string = "No data";
     name: string;
     nombre: string;

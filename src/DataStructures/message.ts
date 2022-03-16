@@ -1,6 +1,6 @@
 import { commandList } from "../Constants/commands";
 
-export class message {
+export class Message {
     chatId: string;
     date: string = Date();
     firstName: string = "";

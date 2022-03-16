@@ -1,4 +1,4 @@
-import { message } from "../DataStructures/message";
+import { Message } from "../DataStructures/message";
 
 export class Baobab {
 
@@ -6,7 +6,7 @@ export class Baobab {
 
     readMessage(msg: any) {
         var promise = new Promise(function (resolve, reject) {
-            var MSG = new message(msg);
+            var MSG = new Message(msg);
             console.log(`Username      :   ${MSG.username}`);
             console.log(`Time          :   ${MSG.date}`);
             console.log(`Has files     :   ${(MSG.hasDocument || MSG.hasPhoto || MSG.hasSticker)}`);
